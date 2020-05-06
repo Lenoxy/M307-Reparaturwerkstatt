@@ -1,4 +1,9 @@
-# M307-Reparaturwerkstatt
+# M307-Reparaturwerkstatt (Leo Scherer)
+
+## Sitemap
+* Show (/): Zeigt alle offenen Aufträge 
+* Create (/create): Auf dieser Seite können neue Aufträge erstellt werden
+* Edit (/edit): Auf dieser Seite können bestehende Aufträge angepasst werden.
 
 ## Formulare
 ### Welcome / List view
