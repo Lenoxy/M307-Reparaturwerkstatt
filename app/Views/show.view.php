@@ -7,6 +7,7 @@
 </head>
 <body>
 
+<a href="create">Create new</a>
 <table>
     <tr>
         <th>Name</th>

@@ -24,7 +24,7 @@
             <?php
             foreach ($urgencies as $u) {
                 ?>
-                <option><?PHP echo $u->name ?></option>
+                <option value="<?PHP echo $u->urgencyId ?>"><?PHP echo $u->name ?></option>
             <?PHP } ?>
         </select>
 
@@ -33,11 +33,19 @@
             <?php
             foreach ($tools as $t) {
                 ?>
-                <option><?PHP echo $t->name ?></option>
+                <option value="<?PHP echo $t->id ?>"><?PHP echo $t->name ?></option>
             <?PHP } ?>
         </select>
     </fieldset>
 
+    <?PHP if(isset($errors)){ ?>
+    <div class="errorBox">
+        <?PHP
+        foreach ($errors as $error) { ?>
+            <p class="error"><?PHP echo $error ?></p>
+        <?PHP } ?>
+    </div>
+    <?PHP } ?>
 
     <input type="submit" value="Absenden">
 </form>
