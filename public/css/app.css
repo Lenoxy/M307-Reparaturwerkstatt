@@ -7,14 +7,77 @@ text{
     color: red;
 }
 
+div {
+    width: 100%;
+}
+
+div.buttonDiv{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.centerFlexbox {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .button {
-    display: block;
     width: 115px;
-    height: 25px;
+    height: 45px;
     background: #4E9CAF;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
     color: white;
     font-weight: bold;
+}
+table{
+    border: 1px black solid;
+}
+
+td{
+    margin: 3px;
+}
+
+form {
+    width: 600px;
+}
+
+form fieldset span{
+    display: block;
+    margin: 7px;
+}
+
+body {
+    margin: 2rem;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+}
+
+h1 {
+    text-align: center;
+    padding: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    padding: 0.625rem;
+    background-color: lightgray;
+}
+
+td, th {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    text-align: left;
+    padding: 0.625rem;
+}
+
+tr:nth-child(even) {
+    background-color: gray;
 }

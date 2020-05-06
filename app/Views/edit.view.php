@@ -7,6 +7,12 @@
 </head>
 <body>
 
+<div class="buttonDiv">
+    <a href="list" class="button">< Back</a>
+    <h1>Reparaturwerkstatt - Bearbeiten</h1>
+    <span>Leo Scherer</span>
+</div>
+
 <form action="handle-edit" method="post">
     <fieldset>
         <input type="hidden" name="id" value="<?PHP echo $assignment->assignmentId ?>">

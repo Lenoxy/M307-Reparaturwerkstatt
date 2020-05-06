@@ -6,49 +6,67 @@
     <link rel="stylesheet" href="public/css/app.css">
 </head>
 <body>
-<form action="handle-create" method="post">
-    <fieldset>
-        <label for="name">Name *</label>
-        <input type="text" id="name" name="name" required>
 
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required>
+<div class="buttonDiv">
+    <a href="list" class="button">< Back</a>
+    <h1>Reparaturwerkstatt - Erstellen</h1>
+    <span>Leo Scherer</span>
+</div>
 
-        <label for="phone">Telefon</label>
-        <input type="tel" id="phone" name="phone">
-    </fieldset>
+<div class="centerFlexbox">
+    <form action="handle-create" method="post">
+        <fieldset>
+        <span>
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required>
+        </span>
 
-    <fieldset>
-        <label for="urgency">Dringlichkeit</label>
-        <select id="urgency" name="urgency">
-            <?php
-            foreach ($urgencies as $u) {
-                ?>
-                <option value="<?PHP echo $u->urgencyId ?>"><?PHP echo $u->name ?></option>
-            <?PHP } ?>
-        </select>
+            <span>
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+        </span>
+            <span>
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone">
+        </span>
+        </fieldset>
 
-        <label for="tool">Werkzeug</label>
-        <select id="tool" name="tool">
-            <?php
-            foreach ($tools as $t) {
-                ?>
-                <option value="<?PHP echo $t->id ?>"><?PHP echo $t->name ?></option>
-            <?PHP } ?>
-        </select>
-    </fieldset>
+        <fieldset>
+        <span>
+            <label for="urgency">Dringlichkeit</label>
+            <select id="urgency" name="urgency">
+                <?php
+                foreach ($urgencies as $u) {
+                    ?>
+                    <option value="<?PHP echo $u->urgencyId ?>"><?PHP echo $u->name ?></option>
+                <?PHP } ?>
+            </select>
+        </span>
 
-    <?PHP if(isset($errors)){ ?>
-    <div class="errorBox">
-        <?PHP
-        foreach ($errors as $error) { ?>
-            <p class="error"><?PHP echo $error ?></p>
+            <span>
+            <label for="tool">Werkzeug</label>
+            <select id="tool" name="tool">
+                <?php
+                foreach ($tools as $t) {
+                    ?>
+                    <option value="<?PHP echo $t->id ?>"><?PHP echo $t->name ?></option>
+                <?PHP } ?>
+            </select>
+        </span>
+        </fieldset>
+
+        <?PHP if (isset($errors)) { ?>
+            <div class="errorBox">
+                <?PHP
+                foreach ($errors as $error) { ?>
+                    <p class="error"><?PHP echo $error ?></p>
+                <?PHP } ?>
+            </div>
         <?PHP } ?>
-    </div>
-    <?PHP } ?>
 
-    <input type="submit" value="Absenden">
-</form>
+        <input type="submit" value="Absenden">
+    </form>
+</div>
 
 </body>
 </html>

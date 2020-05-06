@@ -7,8 +7,12 @@
 </head>
 <body>
 
-<a href="create" class="button">Create new</a>
-<table class="pd-flex p-2">
+<div class="buttonDiv">
+    <span>Leo Scherer</span>
+    <h1>Reparaturwerkstatt</h1>
+    <a href="create" class="button">Create new</a>
+</div>
+<table>
     <tr>
         <th>Name</th>
         <th>Werkzeug</th>

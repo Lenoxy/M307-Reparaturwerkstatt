@@ -4,6 +4,7 @@ $router = new Router();
 
 $router->define([
     '' => 'app/Controllers/ShowController.php',
+    'list' => 'app/Controllers/ShowController.php',
     'create' => 'app/Controllers/CreateController.php',
     'edit' => 'app/Controllers/EditController.php',
 

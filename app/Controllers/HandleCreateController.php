@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         0,
         Urgency::getById($urgencyId),
         Tool::getById($toolId),
-        date('YYYY-MM-dd')
+        date('YYYY-mm-dd')
     );
 
     $errors = $a->validate();
