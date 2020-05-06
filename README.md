@@ -54,47 +54,47 @@ In dieser View befinden sich keine Felder zu validieren.
 
 ## Testfälle
 ### New orders show up in list view
-* GIVEN No orders present
+* GIVEN in create view
 * WHEN a user creates a new order
 * THEN the new order appears in the list view
 
 ### List view doesn't show completed orders
-* GIVEN 1 order present
+* GIVEN order in edit view
 * WHEN a user sets the order status to complete
 * THEN the new order doesn't appear in the list view anymore
 
 ### Check inputs while creating
-* GIVEN No orders present
+* GIVEN in create view
 * WHEN a user tries to input invalid data ([criteria](#validation-newItem))
 * THEN the form won't be submitted and a error message will show
 
-### Check inputs while creating
-* GIVEN No orders present
+### Check inputs while editing
+* GIVEN in edit view
 * WHEN a user tries to input invalid data ([criteria](#validation-editItem))
 * THEN the form won't be submitted and a error message will show
 
 ### Set new orders in progress
-* GIVEN No orders present
+* GIVEN in create view
 * WHEN a user creates a new order
 * THEN the new order is set 'in progress'
 
 ### Edit order name
-* GIVEN One order present
+* GIVEN One order in edit view
 * WHEN a user edits the name
 * THEN the name is updated and displayed in the list view.
 
 ### Oldest orders show on top
-* GIVEN Three orders present, with three different dates.
+* GIVEN Multiple orders present, with different dates.
 * WHEN a user opens the list view
 * THEN the oldest order is shown on top, while the newest is shown at the bottom.
 
 ### Order and items in list view
-* GIVEN One order present
+* GIVEN in list view
 * WHEN a user opens the list view
 * THEN the following colums are visible: Name, Werkzeug, Abgeschlossen bis, Status
 
 ### Don't allow SQL injection
-* GIVEN No orders present
+* GIVEN in create view
 * WHEN a user creates a new order
 * THEN SQL Injection is not working
 
