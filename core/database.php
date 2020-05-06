@@ -5,10 +5,10 @@
  *
  * @return PDO
  */
-function connectToDatabase()
+function database()
 {
     try {
-        return new PDO('mysql:host=127.0.0.1;dbname=tasklist', 'root', '', [
+        return new PDO('mysql:host=127.0.0.1;dbname=reparaturwerkstatt', 'root', '', [
             PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
         ]);
