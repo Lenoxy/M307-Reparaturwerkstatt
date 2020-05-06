@@ -37,14 +37,14 @@ In dieser View befinden sich keine Felder zu validieren.
 * name varchar(255) not null
 
 
-### Table order
-* orderId int primary key auto_increment
+### Table assignment
+* assignmentId int primary key auto_increment
 * name varchar(50) not null
 * email varchar(100) not null
 * phone varchar(15)
 * progress tinyint(1) not null
 * fkUrgencyId int not null
-* tool varchar(255) not null
+* fkToolId int not null
 * createdAt date not null
 
 ### Table urgency
