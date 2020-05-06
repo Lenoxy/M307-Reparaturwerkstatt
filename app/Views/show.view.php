@@ -7,8 +7,8 @@
 </head>
 <body>
 
-<a href="create">Create new</a>
-<table>
+<a href="create" class="button">Create new</a>
+<table class="pd-flex p-2">
     <tr>
         <th>Name</th>
         <th>Werkzeug</th>
