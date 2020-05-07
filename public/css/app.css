@@ -1,9 +1,9 @@
-.page-wrapper{
+.page-wrapper {
     margin-left: 50px;
     margin-right: 50px;
 }
 
-text{
+text {
     color: red;
 }
 
@@ -11,7 +11,7 @@ div {
     width: 100%;
 }
 
-div.buttonDiv{
+div.buttonDiv {
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
@@ -33,12 +33,13 @@ div.buttonDiv{
     color: white;
     font-weight: bold;
 }
-table{
+
+table {
     border: 1px black solid;
     width: 100%;
 }
 
-td{
+td {
     margin: 3px;
 }
 
@@ -46,7 +47,7 @@ td{
     width: 600px;
 }
 
-form fieldset span{
+form fieldset span {
     display: block;
     margin: 7px;
 }

@@ -20,7 +20,6 @@ Diese View zeigt nur
 ### List view
 In dieser View befinden sich keine Felder zu validieren.
 
-<a name="validation-newItem"/>
 ### New item view
 * Name wird benötigt
 * Email enthält das @-Zeichen
@@ -28,7 +27,6 @@ In dieser View befinden sich keine Felder zu validieren.
 * Dringlichkeit wird benötigt
 * Werkzeug wird benötigt
 
-<a name="validation-editItem"/>
 ### Edit item view
 * Name wird benötigt
 * Email enthält das @-Zeichen
@@ -58,55 +56,75 @@ In dieser View befinden sich keine Felder zu validieren.
 * timeNeeded int not null
 
 ## Testfälle
-### New orders show up in list view
+### New assignments show up in list view
 * GIVEN in create view
-* WHEN a user creates a new order
-* THEN the new order appears in the list view
+* WHEN a user creates a new assignment
+* THEN the new assignment appears in the list view
 
-### List view doesn't show completed orders
-* GIVEN order in edit view
-* WHEN a user sets the order status to complete
-* THEN the new order doesn't appear in the list view anymore
+(07.05.2020, 11:36) Test erfolgreich durchegführt
+
+### List view doesn't show completed assignments
+* GIVEN assignment in edit view
+* WHEN a user sets the assignment status to complete
+* THEN the new assignment doesn't appear in the list view anymore
+
+(07.05.2020, 11:37) Test erfolgreich durchegführt
 
 ### Check inputs while creating
 * GIVEN in create view
-* WHEN a user tries to input invalid data ([criteria](#validation-newItem))
+* WHEN a user tries to input invalid data (see the criteria under 'validation')
 * THEN the form won't be submitted and a error message will show
+
+(07.05.2020, 11:37) Test erfolgreich durchegführt
 
 ### Check inputs while editing
 * GIVEN in edit view
-* WHEN a user tries to input invalid data ([criteria](#validation-editItem))
+* WHEN a user tries to input invalid data (see the criteria under 'validation')
 * THEN the form won't be submitted and a error message will show
 
-### Set new orders in progress
-* GIVEN in create view
-* WHEN a user creates a new order
-* THEN the new order is set 'in progress'
+(07.05.2020, 11:40) Test erfolgreich durchegführt
 
-### Edit order name
-* GIVEN One order in edit view
+### Set new assignments in progress
+* GIVEN in create view
+* WHEN a user creates a new assignment
+* THEN the new assignment is set 'in progress'
+
+(07.05.2020, 11:41) Test erfolgreich durchegführt
+
+### Edit assignment name
+* GIVEN One assignment in edit view
 * WHEN a user edits the name
 * THEN the name is updated and displayed in the list view.
 
-### Oldest orders show on top
-* GIVEN Multiple orders present, with different dates.
-* WHEN a user opens the list view
-* THEN the oldest order is shown on top, while the newest is shown at the bottom.
+(07.05.2020, 11:41) Test erfolgreich durchegführt
 
-### Order and items in list view
+### Assignments closest to deadline show on top
+* GIVEN Multiple assignments present, with different dates.
+* WHEN a user opens the list view
+* THEN the oldest assignment is shown on top, while the newest is shown at the bottom.
+
+(07.05.2020, 11:41) Test erfolgreich durchegführt
+
+### Assignment and items in list view
 * GIVEN in list view
 * WHEN a user opens the list view
 * THEN the following colums are visible: Name, Werkzeug, Abgeschlossen bis, Status
 
+(07.05.2020, 11:44) Test erfolgreich durchegführt. Die Zeilen 'Auswahl' und 'Edit' sind zusätzlich verfügbar.
+
 ### Don't allow SQL injection
 * GIVEN in create view
-* WHEN a user creates a new order
+* WHEN a user creates a new assignment
 * THEN SQL Injection is not working
+
+(07.05.2020, 11:45) Test erfolgreich durchegführt
 
 ### The page is showing
 * GIVEN The browser is opened
 * WHEN a user inserts the adress
 * THEN the list view displays.
+
+(07.05.2020, 11:45) Test erfolgreich durchegführt
 
 ## Roadmap
 |            | 05.05.        | 06.05.        | 07.05.|
