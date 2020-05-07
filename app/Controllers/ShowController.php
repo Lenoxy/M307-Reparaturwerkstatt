@@ -1,4 +1,16 @@
 <?php
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+    foreach ($_POST['check_list'] as $key =>$box){
+        if($box == 'on'){
+            $a = Assignment::getById($key);
+            $a->state = 1;
+            $a->update();
+        }
+
+
+    }
+}
 
 $assignments = Assignment::getAll();
 
@@ -11,7 +23,7 @@ foreach ($assignments as $a) {
         $date = $dateThen->format('d.m.Y');
         $status = $dateThen > $dateNow;
         $editLink = 'edit?id=' . $a->assignmentId;
-        $assignmentsReady[] = ['name' => $a->name, 'werkzeug' => $a->tool->name, 'abgeschlossen' => $date, 'status' => $status, 'edit' => $editLink];
+        $assignmentsReady[] = ['id'=> $a->assignmentId, 'name' => $a->name, 'werkzeug' => $a->tool->name, 'abgeschlossen' => $date, 'status' => $status, 'edit' => $editLink];
     }
 }
 

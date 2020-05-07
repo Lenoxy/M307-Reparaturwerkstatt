@@ -36,6 +36,7 @@ div.buttonDiv{
 }
 table{
     border: 1px black solid;
+    width: 100%;
 }
 
 td{
