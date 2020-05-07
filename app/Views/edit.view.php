@@ -21,7 +21,7 @@
 
 <div class="centerFlexbox">
 
-    <form action="handle-edit" method="post">
+    <form action="handle-edit" method="post" class="centerWidth">
         <fieldset>
             <input type="hidden" name="id" value="<?PHP echo $assignment->assignmentId ?>">
 

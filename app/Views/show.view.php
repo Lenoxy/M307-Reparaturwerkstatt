@@ -35,7 +35,7 @@
             </tr>
         <?PHP } ?>
     </table>
-    <input type="submit" value="Ausgewählte Abschliessen">
+    <input type="submit" value="Ausgewählte Abschliessen" class="button">
 </form>
 
 

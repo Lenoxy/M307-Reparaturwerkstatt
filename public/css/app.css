@@ -25,7 +25,6 @@ div.buttonDiv{
 }
 
 .button {
-    width: 115px;
     height: 45px;
     background: #4E9CAF;
     padding: 10px;
@@ -43,7 +42,7 @@ td{
     margin: 3px;
 }
 
-form {
+.centerWidth {
     width: 600px;
 }
 

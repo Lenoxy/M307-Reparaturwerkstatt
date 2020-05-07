@@ -1,15 +1,17 @@
 <?php
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
-
-    foreach ($_POST['check_list'] as $key =>$box){
-        if($box == 'on'){
-            $a = Assignment::getById($key);
-            $a->state = 1;
-            $a->update();
+    if(isset($_POST['check_list'])){
+        foreach ($_POST['check_list'] as $key =>$box){
+            if($box == 'on'){
+                $a = Assignment::getById($key);
+                $a->state = 1;
+                $a->update();
+            }
         }
-
-
     }
+
+
+
 }
 
 $assignments = Assignment::getAll();

@@ -20,7 +20,7 @@
 </div>
 
 <div class="centerFlexbox">
-    <form action="handle-create" method="post">
+    <form action="handle-create" method="post"  class="centerWidth">
         <fieldset>
         <span>
             <label for="name">Name *</label>
