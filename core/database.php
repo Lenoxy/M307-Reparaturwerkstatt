@@ -8,7 +8,7 @@
 function database()
 {
     try {
-        return new PDO('mysql:host=127.0.0.1;dbname=reparaturwerkstatt', 'root', '', [
+        return new PDO('mysql:host=localhost;dbname=kurseictbz_30714', 'kurseictbz_30714', 'db_307_pw_14', [
             PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
         ]);

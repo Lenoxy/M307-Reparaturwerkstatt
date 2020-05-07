@@ -22,9 +22,6 @@ SET time_zone = "+00:00";
 -- Database: `reparaturwerkstatt`
 --
 
-CREATE DATABASE `reparaturwerkstatt`;
-use `reparaturwerkstatt`;
-
 -- --------------------------------------------------------
 
 --
