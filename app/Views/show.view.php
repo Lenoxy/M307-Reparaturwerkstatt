@@ -9,7 +9,7 @@
 
 <div class="buttonDiv">
     <span>Leo Scherer</span>
-    <h1>Reparaturwerkstatt</h1>
+    <h1>WeBau</h1>
     <a href="create" class="button">Create new</a>
 </div>
 <table>

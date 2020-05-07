@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <title>Create Assignments</title>
     <link rel="stylesheet" href="public/css/app.css">
+    <script src="public/js/app.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(event) {
+            calculateDeadline();
+        });
+    </script>
 </head>
 <body>
 
 <div class="buttonDiv">
     <a href="list" class="button">< Back</a>
-    <h1>Reparaturwerkstatt - Erstellen</h1>
+    <h1>WeBau - Erstellen</h1>
     <span>Leo Scherer</span>
 </div>
 
@@ -32,19 +38,24 @@
         </fieldset>
 
         <fieldset>
-        <span>
-            <label for="urgency">Dringlichkeit</label>
-            <select id="urgency" name="urgency">
-                <?php
-                foreach ($urgencies as $u) {
-                    ?>
-                    <option value="<?PHP echo $u->urgencyId ?>"><?PHP echo $u->name ?></option>
-                <?PHP } ?>
-            </select>
-        </span>
+            <span>
+                <label for="urgency">Dringlichkeit *</label>
+                <select id="urgency" name="urgency" onchange="calculateDeadline()">
+                    <?php
+                    foreach ($urgencies as $u) {
+                        ?>
+                        <option value="<?PHP echo $u->daysNeeded ?>"><?PHP echo $u->name ?></option>
+                    <?PHP } ?>
+                </select>
+            </span>
 
             <span>
-            <label for="tool">Werkzeug</label>
+                <label>Fertig bis</label>
+                <input readonly id="deadlineDate">
+            </span>
+
+            <span>
+            <label for="tool">Werkzeug *</label>
             <select id="tool" name="tool">
                 <?php
                 foreach ($tools as $t) {

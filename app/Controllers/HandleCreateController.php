@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialchars($_POST['email']);
     $phone = htmlspecialchars($_POST['phone']);
-    $urgencyId = htmlspecialchars($_POST['urgency']);
+    $urgencyDaysNeeded = htmlspecialchars($_POST['urgency']);
     $toolId = htmlspecialchars($_POST['tool']);
 
 
@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $email,
         $phone,
         0,
-        Urgency::getById($urgencyId),
+        Urgency::getByDaysNeeded($urgencyDaysNeeded),
         Tool::getById($toolId),
         date('YYYY-mm-dd')
     );

@@ -42,21 +42,22 @@ class Assignment
     public static function getAll()
     {
         $statement = database()->prepare('SELECT
-            assignmentId,
-            name,
-            email,
-            phone,
-            progress,
-            fkUrgencyId,
-            fkToolId,
-            createdAt
-        FROM `assignment`
-        ORDER BY createdAt ASC
+            a.assignmentId,
+            a.name,
+            a.email,
+            a.phone,
+            a.progress,
+            a.fkUrgencyId,
+            a.fkToolId,
+            a.createdAt
+        FROM `assignment` as a
+        LEFT JOIN urgency as u on fkUrgencyId = u.urgencyId
+        ORDER BY DATE_ADD(createdAt, INTERVAL u.daysNeeded DAY ) ASC 
         ');
+
 
         $statement->execute();
         $dbResults = $statement->fetchAll();
-
         $assignments = [];
         foreach ($dbResults as $r){
             $assignments[] = self::createAssignmentObj($r);
@@ -103,8 +104,8 @@ class Assignment
         if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
             $errors[] = "Invalide Email";
         }
-        if (strlen($this->phone) < 10){
-            $errors[] = "Invalide Telefonnummer";
+        if(preg_replace("/[^\+\-(\)\ 0-9]/", '', $this->phone) != $this->phone){
+            $errors[] = "Telefonnummer darf nur Zahlen und folgende Zeichen beinhalten: +-()";
         }
         if (strlen($this->urgency->urgencyId) < 1) {
             $errors[] = "Invalide Dringlichkeit";

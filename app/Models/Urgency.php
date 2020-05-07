@@ -23,6 +23,15 @@ class Urgency
         return self::createUrgencyObj($statement->fetch());
     }
 
+    public static function getByDaysNeeded($daysNeeded)
+    {
+        $statement = database()->prepare('SELECT urgencyId, name, daysNeeded FROM urgency WHERE daysNeeded = :daysNeeded');
+        $statement->bindParam(':daysNeeded', $daysNeeded);
+        $statement->execute();
+
+        return self::createUrgencyObj($statement->fetch());
+    }
+
     public static function getAll()
     {
         $statement = database()->prepare('SELECT
