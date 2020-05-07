@@ -2,7 +2,7 @@
 
 ## Einleitung
 Dieses Projekt wurde für den ÜK 307 gelöst. Die Anforderungen für das Projekt befinden sich [hier](https://github.com/IctBerufsbildungZentralschweiz/modul-307/tree/master/Tag%203-5%20Projektarbeit/Projekte/02%20Reparaturwerkstatt).
-
+Das Projekt wurde auf dem Webserver der Ict-bz deployed ist dort vorübergehend verfügbar. Dieses Repository beinhaltet den Code und das SQL Script, das notwendig ist um die Webseite laufen zu lassen.
 
 ## Sitemap
 * Show (/): Zeigt alle offenen Aufträge 
